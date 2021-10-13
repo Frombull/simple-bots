@@ -1,2 +1,2 @@
 # Pianotiles-bot
-A simple bot that plays Pianotiles
+A simple python bot that plays Pianotiles
