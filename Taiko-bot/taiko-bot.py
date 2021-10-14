@@ -12,7 +12,7 @@ KEYS = {
 }
 
 
-def press(button):
+def press(button: string):
     win32api.keybd_event(KEYS[button], 0, 0, 0)
     sleep(0.06)
     win32api.keybd_event(KEYS[button], 0, win32con.KEYEVENTF_KEYUP, 0)
