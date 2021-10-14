@@ -1,7 +1,7 @@
-from time import sleep
+from keyboard import is_pressed
+from pyautogui import pixel
 import win32api, win32con
-import pyautogui
-import keyboard
+from time import sleep
 
 
 '''
@@ -24,8 +24,8 @@ def press(button):
 
 
 def main():
-    while not keyboard.is_pressed('q'):
-        if pyautogui.pixel(878, 578)[0] < 200:
+    while not is_pressed('q'):
+        if pixel(878, 578)[0] < 200:
             press('right_arrow')
         else:
             press('left_arrow')
