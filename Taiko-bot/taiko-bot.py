@@ -1,6 +1,6 @@
+from pyautogui import pixelMatchesColor
 from keyboard import is_pressed
 import win32api, win32con
-import pyautogui as pygui
 from time import sleep
 
 
@@ -21,21 +21,21 @@ def press(button):
 def main():
     while not is_pressed('q'):
         #Red circle
-        if pygui.pixelMatchesColor(615, 370, (247, 74, 32), tolerance=3):
+        if pixelMatchesColor(615, 370, (247, 74, 32), tolerance=3):
             press('j')
         
         #Blue circle
-        elif pygui.pixelMatchesColor(615, 375, (50, 173, 189), tolerance=3):
+        elif pixelMatchesColor(615, 375, (50, 173, 189), tolerance=3):
             press('k')
         
         #Yellow bar
-        elif pygui.pixelMatchesColor(615, 375, (255, 180, 0), tolerance=3):
+        elif pixelMatchesColor(615, 375, (255, 180, 0), tolerance=3):
             press('j')
             sleep(0.02)
             press('f')
 
         #Baloon
-        elif pygui.pixelMatchesColor(920, 463, (255, 148, 24), tolerance=3):
+        elif pixelMatchesColor(920, 463, (255, 148, 24), tolerance=3):
             press('j')
             sleep(0.02)
             press('f')
